@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --bg-secondary: #F1F4F9;
+    --border-color: #E2E8F0;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --navy-deep: #0A192F;
+    --navy-accent: #1E3A8A;
+    --blue-accent: #2563EB;
+  }
+
+  .dark {
+    --bg-main: #0B1120;
+    --bg-card: #131D31;
+    --bg-secondary: #1E293B;
+    --border-color: #27354E;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --navy-deep: #050B14;
+    --navy-accent: #3B82F6;
+    --blue-accent: #60A5FA;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Smooth fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Mermaid diagram specific styling */
+.mermaid-container svg {
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+}

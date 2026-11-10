@@ -1,0 +1,36 @@
+# Node & Build artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.production
+.env.*.local
+
+# Local working copies / archives (not part of this project)
+oc assign1/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temporary uploaded files
+uploads/
+tmp/
